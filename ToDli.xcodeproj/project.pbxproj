@@ -14,6 +14,7 @@
 		359715F920A899C1003676BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359715F820A899C1003676BE /* Assets.xcassets */; };
 		359715FC20A899C1003676BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359715FA20A899C1003676BE /* LaunchScreen.storyboard */; };
 		35C7302620B87F1C00F7C86C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C7302520B87F1C00F7C86C /* CategoryViewController.swift */; };
+		DCE981EB0AE0F298AEE29491 /* Pods_ToDli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99923318EAB6DBC5F334E4BE /* Pods_ToDli.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		359715FB20A899C1003676BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		359715FD20A899C1003676BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C7302520B87F1C00F7C86C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		99923318EAB6DBC5F334E4BE /* Pods_ToDli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71420B2F77E64B9C6F77904 /* Pods-ToDli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDli.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDli/Pods-ToDli.release.xcconfig"; sourceTree = "<group>"; };
+		C82A8E821A2E849570E87CC3 /* Pods-ToDli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDli.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDli/Pods-ToDli.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE981EB0AE0F298AEE29491 /* Pods_ToDli.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,8 @@
 			children = (
 				359715F020A899C0003676BE /* ToDli */,
 				359715EF20A899C0003676BE /* Products */,
+				CA79097D85E57F88462FAB25 /* Pods */,
+				A25212EC456FDCBBE397206F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,23 @@
 			path = ToDli;
 			sourceTree = "<group>";
 		};
+		A25212EC456FDCBBE397206F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99923318EAB6DBC5F334E4BE /* Pods_ToDli.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA79097D85E57F88462FAB25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C82A8E821A2E849570E87CC3 /* Pods-ToDli.debug.xcconfig */,
+				B71420B2F77E64B9C6F77904 /* Pods-ToDli.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3597160020A899C1003676BE /* Build configuration list for PBXNativeTarget "ToDli" */;
 			buildPhases = (
+				16E0A1D4803E7BC16454F3DC /* [CP] Check Pods Manifest.lock */,
 				359715EA20A899C0003676BE /* Sources */,
 				359715EB20A899C0003676BE /* Frameworks */,
 				359715EC20A899C0003676BE /* Resources */,
+				76D640A72317460AF541EFFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +193,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16E0A1D4803E7BC16454F3DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDli-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76D640A72317460AF541EFFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ToDli/Pods-ToDli-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToDli/Pods-ToDli-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		359715EA20A899C0003676BE /* Sources */ = {
@@ -318,15 +385,13 @@
 		};
 		3597160120A899C1003676BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C82A8E821A2E849570E87CC3 /* Pods-ToDli.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToDli/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexeytrofimchuk.ToDli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -336,15 +401,13 @@
 		};
 		3597160220A899C1003676BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B71420B2F77E64B9C6F77904 /* Pods-ToDli.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToDli/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexeytrofimchuk.ToDli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
